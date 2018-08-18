@@ -132,7 +132,7 @@ Obviamente, está permitido usar material disponible públicamente, por ejemplo,
 
 # Proyectos
 
-Pueden encontrar toda la información relacionada a los proyectos en la [sección correspondiente](Proyecto).
+Pueden encontrar toda la información relacionada a los proyectos en la [sección correspondiente](proyecto).
 
 # Wiki
 
