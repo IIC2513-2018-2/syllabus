@@ -8,17 +8,6 @@ Los enunciados dan la línea general de la funcionalidad que deben implementar, 
 
 Cada equipo tiene asignado un proyecto y un ayudante que los guiará y evaluará durante el semestre. Las asignaciones de proyecto y ayudante estarán detalladas aquí prontamente.
 
-[Cambalache](https://docs.google.com/document/d/1z8Rj6GvaDIv4aa1fD75oLSHQc5Db-NEu8LElSjGGefk)
-[Gift & Exchange](https://docs.google.com/document/d/1HTHnw0Oka8nHM7NKZvEwErSDJCNScv6GZqcMBtmjt9k)
-[TravelWorld](https://docs.google.com/document/d/1HugBXOxoPAXoUGtLwgjLCDX0_dIrEtcrwNijmxtwxdo)
-[Mercado Negro UC](https://docs.google.com/document/d/1ly6-Xr2PVPzMPrpuI9J8wY5swBZ-ZLcLhQUNEUnVals)
-[Let's Party](https://docs.google.com/document/d/10z6jDmrH4QQDtIHjNcZxziq57sx6-RH1shuCAVXG8Vo)
-[Traceur](https://docs.google.com/document/d/14YLsMM9E49EpBjvQ4ihWVcApZOyJwp1klN9GO_EfouQ)
-[StudentBoard](https://docs.google.com/document/d/1z8Rj6GvaDIv4aa1fD75oLSHQc5Db-NEu8LElSjGGefk)
-[Encuentra Cursos](https://docs.google.com/document/d/1wVYUZd6FaOsefQzscMzy-gSIn7i7wo-_yuh40HhUdJw)
-[Dietoo](https://docs.google.com/document/d/10M-Rrs7oVnQERDarIpGcRURN20NxMMXdWebhnRrAMJ4)
-
-
 | Equipo  | Proyecto | Ayudante |
 |:-------------------- |:---------------------------| :------|
 | AccuDev | [Cambalache](https://docs.google.com/document/d/1z8Rj6GvaDIv4aa1fD75oLSHQc5Db-NEu8LElSjGGefk) | Daniela |
