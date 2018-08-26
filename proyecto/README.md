@@ -21,29 +21,29 @@ Cada equipo tiene asignado un proyecto y un ayudante que los guiará y evaluará
 
 | Equipo  | Proyecto | Ayudante |
 |:-------------------- |:---------------------------| :------|
-| AccuDev | [Cambalache](https://docs.google.com/document/d/1z8Rj6GvaDIv4aa1fD75oLSHQc5Db-NEu8LElSjGGefk) | |
-| Awebxis Sanchez | [Cambalache](https://docs.google.com/document/d/1z8Rj6GvaDIv4aa1fD75oLSHQc5Db-NEu8LElSjGGefk) | |
-| webcitos | [Gift & Exchange](https://docs.google.com/document/d/1HTHnw0Oka8nHM7NKZvEwErSDJCNScv6GZqcMBtmjt9k) | |
-| TecWeb | [Gift & Exchange](https://docs.google.com/document/d/1HTHnw0Oka8nHM7NKZvEwErSDJCNScv6GZqcMBtmjt9k) | |
-| PeorEsNada | [Gift & Exchange](https://docs.google.com/document/d/1HTHnw0Oka8nHM7NKZvEwErSDJCNScv6GZqcMBtmjt9k) | |
-| Hackermen | [Gift & Exchange](https://docs.google.com/document/d/1HTHnw0Oka8nHM7NKZvEwErSDJCNScv6GZqcMBtmjt9k) | |
-| TeamWeb | [TravelWorld](https://docs.google.com/document/d/1HugBXOxoPAXoUGtLwgjLCDX0_dIrEtcrwNijmxtwxdo) | |
-| Los Gringos | [TravelWorld](https://docs.google.com/document/d/1HugBXOxoPAXoUGtLwgjLCDX0_dIrEtcrwNijmxtwxdo) | |
-| 404_brain_not_found | [TravelWorld](https://docs.google.com/document/d/1HugBXOxoPAXoUGtLwgjLCDX0_dIrEtcrwNijmxtwxdo) | |
-| Webbers | [Mercado Negro UC](https://docs.google.com/document/d/1ly6-Xr2PVPzMPrpuI9J8wY5swBZ-ZLcLhQUNEUnVals) | |
-| Appers | [Let's Party](https://docs.google.com/document/d/10z6jDmrH4QQDtIHjNcZxziq57sx6-RH1shuCAVXG8Vo) | |
-| RaBaPa | [Let's Party](https://docs.google.com/document/d/10z6jDmrH4QQDtIHjNcZxziq57sx6-RH1shuCAVXG8Vo) | |
-| ZacLovers | [Let's Party](https://docs.google.com/document/d/10z6jDmrH4QQDtIHjNcZxziq57sx6-RH1shuCAVXG8Vo) | |
-| DAT Squad | [Let's Party](https://docs.google.com/document/d/10z6jDmrH4QQDtIHjNcZxziq57sx6-RH1shuCAVXG8Vo) | |
-| Weep dev | [Traceur](https://docs.google.com/document/d/14YLsMM9E49EpBjvQ4ihWVcApZOyJwp1klN9GO_EfouQ) | |
-| StudentTafel | [StudentBoard](https://docs.google.com/document/d/1z8Rj6GvaDIv4aa1fD75oLSHQc5Db-NEu8LElSjGGefk) | |
-| La Sociedad | [Encuentra Cursos](https://docs.google.com/document/d/1wVYUZd6FaOsefQzscMzy-gSIn7i7wo-_yuh40HhUdJw) | |
-| PauMaMa | [Encuentra Cursos](https://docs.google.com/document/d/1wVYUZd6FaOsefQzscMzy-gSIn7i7wo-_yuh40HhUdJw) | |
-| Webers | [Encuentra Cursos](https://docs.google.com/document/d/1wVYUZd6FaOsefQzscMzy-gSIn7i7wo-_yuh40HhUdJw) | |
-| ChinookSalmons | [Dietoo](https://docs.google.com/document/d/10M-Rrs7oVnQERDarIpGcRURN20NxMMXdWebhnRrAMJ4) | |
-| MagnifiCode | [Dietoo](https://docs.google.com/document/d/10M-Rrs7oVnQERDarIpGcRURN20NxMMXdWebhnRrAMJ4) | |
-| Ragnarok | [Dietoo](https://docs.google.com/document/d/10M-Rrs7oVnQERDarIpGcRURN20NxMMXdWebhnRrAMJ4) | |
-| Best | [Dietoo](https://docs.google.com/document/d/10M-Rrs7oVnQERDarIpGcRURN20NxMMXdWebhnRrAMJ4) | |
+| AccuDev | [Cambalache](https://docs.google.com/document/d/1z8Rj6GvaDIv4aa1fD75oLSHQc5Db-NEu8LElSjGGefk) | Daniela |
+| Awebxis Sanchez | [Cambalache](https://docs.google.com/document/d/1z8Rj6GvaDIv4aa1fD75oLSHQc5Db-NEu8LElSjGGefk) | Daniela |
+| webcitos | [Gift & Exchange](https://docs.google.com/document/d/1HTHnw0Oka8nHM7NKZvEwErSDJCNScv6GZqcMBtmjt9k) | Iván |
+| TecWeb | [Gift & Exchange](https://docs.google.com/document/d/1HTHnw0Oka8nHM7NKZvEwErSDJCNScv6GZqcMBtmjt9k) | Iván |
+| PeorEsNada | [Gift & Exchange](https://docs.google.com/document/d/1HTHnw0Oka8nHM7NKZvEwErSDJCNScv6GZqcMBtmjt9k) | Iván |
+| Hackermen | [Gift & Exchange](https://docs.google.com/document/d/1HTHnw0Oka8nHM7NKZvEwErSDJCNScv6GZqcMBtmjt9k) | Iván |
+| TeamWeb | [TravelWorld](https://docs.google.com/document/d/1HugBXOxoPAXoUGtLwgjLCDX0_dIrEtcrwNijmxtwxdo) | Daniela |
+| Los Gringos | [TravelWorld](https://docs.google.com/document/d/1HugBXOxoPAXoUGtLwgjLCDX0_dIrEtcrwNijmxtwxdo) | Daniela |
+| 404_brain_not_found | [TravelWorld](https://docs.google.com/document/d/1HugBXOxoPAXoUGtLwgjLCDX0_dIrEtcrwNijmxtwxdo) | Daniela |
+| Webbers | [Mercado Negro UC](https://docs.google.com/document/d/1ly6-Xr2PVPzMPrpuI9J8wY5swBZ-ZLcLhQUNEUnVals) | Iván |
+| Appers | [Let's Party](https://docs.google.com/document/d/10z6jDmrH4QQDtIHjNcZxziq57sx6-RH1shuCAVXG8Vo) | Ignacio |
+| RaBaPa | [Let's Party](https://docs.google.com/document/d/10z6jDmrH4QQDtIHjNcZxziq57sx6-RH1shuCAVXG8Vo) | Ignacio |
+| ZacLovers | [Let's Party](https://docs.google.com/document/d/10z6jDmrH4QQDtIHjNcZxziq57sx6-RH1shuCAVXG8Vo) | Ignacio |
+| DAT Squad | [Let's Party](https://docs.google.com/document/d/10z6jDmrH4QQDtIHjNcZxziq57sx6-RH1shuCAVXG8Vo) | Ignacio |
+| Weep dev | [Traceur](https://docs.google.com/document/d/14YLsMM9E49EpBjvQ4ihWVcApZOyJwp1klN9GO_EfouQ) | Ignacio |
+| StudentTafel | [StudentBoard](https://docs.google.com/document/d/1z8Rj6GvaDIv4aa1fD75oLSHQc5Db-NEu8LElSjGGefk) | Nicolás |
+| La Sociedad | [Encuentra Cursos](https://docs.google.com/document/d/1wVYUZd6FaOsefQzscMzy-gSIn7i7wo-_yuh40HhUdJw) | Nicolás |
+| PauMaMa | [Encuentra Cursos](https://docs.google.com/document/d/1wVYUZd6FaOsefQzscMzy-gSIn7i7wo-_yuh40HhUdJw) | Nicolás |
+| Webers | [Encuentra Cursos](https://docs.google.com/document/d/1wVYUZd6FaOsefQzscMzy-gSIn7i7wo-_yuh40HhUdJw) | Nicolás |
+| ChinookSalmons | [Dietoo](https://docs.google.com/document/d/10M-Rrs7oVnQERDarIpGcRURN20NxMMXdWebhnRrAMJ4) | Stephanie |
+| MagnifiCode | [Dietoo](https://docs.google.com/document/d/10M-Rrs7oVnQERDarIpGcRURN20NxMMXdWebhnRrAMJ4) | Stephanie |
+| Ragnarok | [Dietoo](https://docs.google.com/document/d/10M-Rrs7oVnQERDarIpGcRURN20NxMMXdWebhnRrAMJ4) | Stephanie |
+| Best | [Dietoo](https://docs.google.com/document/d/10M-Rrs7oVnQERDarIpGcRURN20NxMMXdWebhnRrAMJ4) | Stephanie |
 
 
 

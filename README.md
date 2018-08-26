@@ -30,6 +30,11 @@
 
 | Nombre                | Github        | Email         | Telegram      |
 |:--------------------- |:--------------|:--------------|:--------------|
+| Stephanie Chau | [@stephichau](https://github.com/stephichau) | schau@uc.cl | @stephichau |
+| Daniela Vásquez | [@dfvasquez](https://github.com/dfvasquez) | dfvasquez@uc.cl | @dfvasquez |
+| Nicolás Teare | [@nateare](https://github.com/nateare) | nateare@uc.cl | @nteare |
+| Ignacio Toresano | [@itoresano](https://github.com/itoresano) | ijtoresano@uc.cl | @itoresano |
+| Iván Wolf | [@ivanwolf15](https://github.com/ivanwolf15) | iiwolf@uc.cl | @ivanwolf15 |
 
 ## Objetivos
 
