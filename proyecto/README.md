@@ -45,7 +45,7 @@ Las entregas tendrán una duración de 2 semanas cada una, aunque es posible que
 Las fechas límite **tentativas** (podrían cambiar durante el semestre, en cuyo caso las iremos actualizando aquí) de cada entrega son las siguientes:
 
 * [Entrega 1](enunciados/Entrega1.md): 1 de septiembre a las 21:59:59.999
-* [Entrega 2](enunciados/Entrega2.md): 20 de septiembre a las 21:59:59.999
+* [Entrega 2](enunciados/Entrega2.md): 22 de septiembre a las 21:59:59.999
 * [Entrega 3](enunciados/Entrega3.md): 8 de octubre a las 21:59:59.999
 * [Entrega 4](enunciados/Entrega4.md): 26 de octubre a las 21:59:59.999
 * [Entrega 5](enunciados/Entrega5.md): 12 de noviembre a las 21:59:59.999
