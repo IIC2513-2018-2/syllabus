@@ -1,0 +1,62 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.signup-options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+}
+
+.signup-options > div {
+  width: 50%;
+}
+
+.third-party-signup p {
+  text-align: center;
+}
+
+.third-party-signup a {
+  display: block;
+  color: white;
+  background: #277;
+  padding: 20px;
+  margin: 20px;
+  max-width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.third-party-signup a:hover {
+  background: #a77;
+  border: 5px solid #644343;
+  padding: 15px;
+}
+
+.local-signup {
+  text-align: center;
+}
+
+.local-signup label {
+  display: block;
+  margin: 10px 0;
+}
+
+.local-signup label span {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+hr {
+  height: 100%;
+  width: 0;
+  margin: 0 30px;
+  border-right: 1px solid black;
+}
