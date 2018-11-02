@@ -40,4 +40,92 @@ Semejanza (2 puntos) | Casi ningún elemento tiene el resultado pedido (0 puntos
 
 ## Pregunta 3 (25%)
 
+Hay más de una forma de lograr este resultado, y también hay algunos supuestos válidos que pueden especificarse que modificarán lo que es necesario implementar. Pero lo más importante es tener un _middleware_ que vaya almacenando la cantidad de páginas de producto vistas (según los requisitos, con menos de 1 hora de separación) en un atributo de la sesión (que es lo único (además de _cookies_ directamente), además de base de datos, que podemos utilizar para mantener este "estado") y otro _middleware_ (o un agregado al mismo anterior) que verifique si se han visto más de 10 y agregue el atributo necesario a `ctx.state` para que la vista muestre el cupón.
+
+Si utilizamos dos middlewares, podemos crear uno bien simple como el siguiente:
+```js
+const MAX_INTERVAL_MS = 60 * 60 * 1000; // 1 hour in ms
+
+function countProductPageViews(ctx, next) {
+  const { productPageViews, lastProductPageViewedAt, cart } = ctx.session;
+  let count;
+  let curentViewedAt;
+  // if cart is not empty, reset everything
+  if (cart.length) {
+    count = 0;
+    curentViewedAt = undefined;
+  } else {
+    // if lastProductPageViewedAt is set, it means user saw another page before
+    curentViewedAt = Date.now();
+    count = lastProductPageViewedAt && (curentViewedAt - lastProductPageViewedAt < MAX_INTERVAL_MS)
+      ? productPageViews + 1
+      : 1;
+  }
+  ctx.session.productPageViews = count;
+  ctx.session.lastProductPageViewedAt = curentViewedAt;
+  return next();
+}
+```
+Y añadirlo a la ruta de productos, que debiera ser algo de este estilo:
+```js
+router.get('/products/:id', (ctx, next) => { ... });
+```
+de esta manera:
+```js
+router.get('/products/:id', countProductPageViews, (ctx, next) => { ... });
+```
+
+Luego necesitamos otro _middleware_ que verifique si hay una cuenta mayor o igual a 10 y, en ese caso, agregar la variable del cupón:
+
+```js
+// on the main router
+router.use((ctx, next) => {
+  if (ctx.session.productPageViews >= 10) ctx.state.coupon = true;
+  return next();
+});
+```
+
+Otra opción es que usemos sólo un _middleware_ agregado al router principal. En ese caso necesitaremos verificar el _path_ del request para ver si hace match con `/products/:id` manualmente, y agregar esta condición del segundo _middleware_ al final del mismo:
+
+```js
+const MAX_INTERVAL_MS = 60 * 60 * 1000; // 1 hour in ms
+// on the main router
+router.use((ctx, next) => {
+  const { productPageViews, lastProductPageViewedAt, cart } = ctx.session;
+  // reset everything if cart is not empty
+  if (cart.length) {
+    ctx.session.productPageViews = 0;
+    ctx.session.lastProductPageViewedAt = undefined;
+    return next();
+  }
+  // check if route matches products
+  if (/^\/product\/\d+$/.test(ctx.request.path)) {
+    const now = Date.now();
+    const count = lastProductPageViewedAt && (now - lastProductPageViewedAt < MAX_INTERVAL_MS)
+      ? productPageViews + 1
+      : 1;
+    ctx.session.productPageViews = count;
+    ctx.session.lastProductPageViewedAt = now;
+  }
+  if (ctx.session.productPageViews > 10) ctx.state.coupon = true;
+  return next();
+});
+```
+
+**Pauta**:
+- (1 pto) Mostrar claridad de lo que es un _middleware_ (crear una función que recibe `ctx` y `next` (0.5 ptos), y que llama a `next` en algún punto de su cuerpo (0.5 ptos))
+- (0.5 ptos) Saber cómo agregar un _middleware_ (usar `router.use` o insertarlo antes de otro en una cierta ruta, por ejemplo)
+- (1 pto) leer (0.5 ptos) y escribir (0.5 ptos) correctamente datos en la sesión (utilizar `ctx.session` tanto para obtener propiedades como para asignarlas)
+- (1 pto) por contexto correcto para llevar la cuenta de páginas: esto puede ser ya sea teniendo dos _middlewares_ en que uno se agrega sólo en la ruta correspondiente o con un chequeo del path del request en un _middleware_ más general
+- (1.5 ptos) Llevar la cuenta de vistas de página de producto correctament en sesión. Esto es ir aumentando el contador cuando se cumplen las condiciones (1 pto) y reiniciar la cuenta cuando no se cumplen (carro no vacío e intervalo de tiempo) (0.5 puntos)
+- (1 pto) Asignar `coupon` de acuerdo a la condición pedida (0.5 puntos por chequeo de condición, y 0.5 puntos por asignación correcta de la variable), utilizando `ctx.state`)
+
 ## Pregunta 4 (25%)
+
+1. Es necesario crear una relación N:N entre el modelo Costume y el modelo User. Para ello:
+    1. ejecutamos un comando sequelize para crear una migración para crear la tabla que contendrá ambas _foreign keys_: `sequelize migration:generate --name AddCostumeUserTable`
+    2. abrimos el archivo de la migración creada y, en `up`, agregamos la declaración de la tabla que queremos crear, utilizando `queryInterface.createTable`. Es importante aquí agregar dos columnas a esta tabla, `userId` y `costumeId`, cada una como referencia al `id` del modelo respectivo (type Integer, y le agregamos `references` al atributo respectivo)
+    3. luego tenemos que realizar un cambio en el modelo User y/o en Costume según sea necesario, para agregar la relación a nivel del modelo. Probablemente sólo sea necesario en User (para, a partir de un usuario, poder obtener los disfraces que agregó). Entonces, en `models/user.js` tenemos que agregar algo de este estilo:
+        ```js
+        User.associate()
+        ```
