@@ -123,9 +123,42 @@ router.use((ctx, next) => {
 ## Pregunta 4 (25%)
 
 1. Es necesario crear una relación N:N entre el modelo Costume y el modelo User. Para ello:
-    1. ejecutamos un comando sequelize para crear una migración para crear la tabla que contendrá ambas _foreign keys_: `sequelize migration:generate --name AddCostumeUserTable`
+    1. ejecutamos un comando sequelize para crear una migración para crear la tabla que contendrá ambas _foreign keys_: `sequelize migration:generate --name AddCostumesUsersTable`
     2. abrimos el archivo de la migración creada y, en `up`, agregamos la declaración de la tabla que queremos crear, utilizando `queryInterface.createTable`. Es importante aquí agregar dos columnas a esta tabla, `userId` y `costumeId`, cada una como referencia al `id` del modelo respectivo (type Integer, y le agregamos `references` al atributo respectivo)
-    3. luego tenemos que realizar un cambio en el modelo User y/o en Costume según sea necesario, para agregar la relación a nivel del modelo. Probablemente sólo sea necesario en User (para, a partir de un usuario, poder obtener los disfraces que agregó). Entonces, en `models/user.js` tenemos que agregar algo de este estilo:
+    3. corremos el comando `sequelize db:migrate` para aplicar la migración en la BD
+    4. luego tenemos que realizar un cambio en el modelo User y/o en Costume según sea necesario, para agregar la relación a nivel del modelo. Probablemente sólo sea necesario en User (para, a partir de un usuario, poder obtener los disfraces que agregó). Entonces, en `models/user.js` tenemos que agregar algo de este estilo:
         ```js
-        User.associate()
+        user.associate = function associate(models) {
+          user.belongsToMany(models.costume, { through: 'CostumesUsers' });
+        };
         ```
+        Eso servirá para que el modelo use automáticamente la tabla creada para mantener la relación entre entidades.
+
+    **Pauta**: (3 puntos)
+    1. 0.5 puntos por ejecutar un comando para crear una migración o por crear el archivo directamente (no es necesario que tengan el comando explícito mientras hagan explicado bien el paso)
+    2. 1 punto por escribir o describir el contenido de la migración, particularmente en el método `up`: 0.5 puntos por la creación general de la tabla, y 0.5 puntos por las claves foráneas (sólo 0.3 puntos si no mencionan usar `references` o la creación de la _constraint_ de clave foránea)
+    3. 0.5 puntos por ejecutar la migración con `db:migrate` (no es necesario que escriban el comando preciso mientras describan bien que quieren ejecutar esto)
+    4. 1 punto por cambios en el modelo: dependiendo de lo que quieran hacer, podría ser necesario un cambio en User, en Costume, o en ambos. Deben al menos mencionar que escribirán una relación `belongsToMany` (0.5 puntos) y alguna descripción (0.5 puntos) de dónde y cómo se hace (escribiendo una función `associate`, utilizando `through` para especificar la clave foránea, etc).
+
+    **Nota**: Otra respuesta válida es crear un modelo que maneje la relación. En ese caso, los puntajes descritos arriba cambian a:
+    1. 0.5 puntos por el comando sequelize para crear la migración+modelo
+    2. 0.5 puntos por los cambios/ajustes a la migración recién creada
+    3. 0.5 puntos por `db:migrate`
+    4. 1.5 puntos por los cambios al modelo creado (0.5 puntos por cada una de las dos relaciones que hay que crear para ese modelo) más los cambios a uno de los modelos user o costume (0.5 puntos)
+
+2. Es necesario obtener el usuario desde los datos de sesión (aunque, suponiendo prácticas como las vistas en clases, se puede suponer que estará presente en `ctx.state.currentUser` ya cargado desde la BD), cargar el disfraz a partir del id que probablemente viene del path, y finalmente agregar ese disfraz a la colección de disfraces del usuario:
+  ```js
+  router.put('/whishlist/costumes/:id', async (ctx) => {
+    const costume = await ctx.orm.costume.findById(ctx.params.id);
+    if (costume) {
+      await ctx.state.currentUser.addCostume(costume);
+    }
+    ctx.redirect('show-costume', costume.id);
+  });
+  ```
+
+  **Pauta**: (3 puntos)
+  - 0.5 puntos por elegir ya sea un método PUT, POST o PATCH para esta ruta
+  - 0.5 puntos por elegir una combinación razonable de _path_ y datos del body (puede ser como el ejemplo, puede ser directamente a un recurso como `wishlist` y con el dato del disfraz a agregar en el _body_)
+  - 1 punto por crear la relación entre usuario y disfraz: es válido tanto asignar la clave foránea directamente como usar los métodos creados por sequelize, como `addCostume`
+  - 0.5 por una respuesta razonable, que puede ser hacer render de un template entregándole los datos del disfraz, o hacer una redirección a alguna otra ruta como en el ejemplo
